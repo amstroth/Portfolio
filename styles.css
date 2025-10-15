@@ -19,7 +19,7 @@
     --white: #fff;
     --pink: #F9D0E1;
     --magenta: #D72E67;
-    
+    --light-teal: #58868E;
 
 }
 
@@ -83,7 +83,7 @@ nav a {
 div.description{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 div.portfoliodesc h1{
@@ -140,6 +140,30 @@ div.portfoliodesc h3{
     margin-left: -1vw ;
 }
 
+div.portfoliodesc h3.lighten{
+    color: var(--light-teal);
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.8vw;
+    font-weight: 500;
+    text-align: left;
+    grid-column: 4/6;
+    grid-row: 1;
+    padding: 7vw  0;
+    margin-left: 11vw ;
+}
+div.portfoliodesc h5{
+    color: var(--electric-blue);
+    font-family: "Space Grotesk", sans-serif;
+    font-size: .9vw;
+    font-weight: 500;
+    text-align: left;
+    font-style: italic;
+    grid-column: 4/6;
+    grid-row: 1;
+    padding: 9.5vw  0;
+    margin-left: -1vw ;
+}
+
 
 div.portfoliodesc p{
     color: var(--teal);
@@ -168,8 +192,23 @@ div.portfoliodesc p.small{
 div.portfoliodesc .smaller{
     font-size:  0.9vw;
     font-weight: 500;
-    padding:  1vw  10vw 0 10vw;
+    padding:  0vw  10vw 0 10vw;
     line-height: 1.6;
     grid-column: 1/4;
     grid-row: 2/5 ;
+    margin-top: -1.5vw;
+}
+
+div.portfoliodesc .logo{
+    grid-column: 4/6;
+    grid-row: 1 ;
+    position: relative;
+    z-index: 0;
+    width: 10vw;
+    margin-left: 20vw ;
+    margin-top: -8vw
+}
+
+div.pink1{
+    background-color: var(--pink);
 }
