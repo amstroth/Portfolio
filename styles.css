@@ -638,7 +638,89 @@ div.pink{
     font-weight: 500;
     text-align: left;
     margin-bottom: 1vw;
+}
 
+#brand-design{
+    display: grid;
+    grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+#brand-design h2{
+    grid-column: 1/5;
+    grid-row: 1;
+    color: var(--teal);
+    font-family: "Space Grotesk", sans-serif;
+    font-style: italic;
+    font-size: 2.5vw;
+    font-weight: 500;
+    text-align: left;
+    padding: 0  8vw 4vw;
+    margin-top: -4vw;
+}
+
+#brand-design #cover{
+    grid-column: 1/9;
+    grid-row: 1;
+    width: 800px;
+    height: auto;
+    margin-left: 6vw;
+    margin-top: 2vw;
+}
+
+#brand-design #leftpage{
+    grid-column: 5/6;
+    grid-row: 1;
+    width: 400px;
+    height: auto;
+    margin-left: 10vw;
+    margin-top: 2vw;
+}
+
+#brand-design #rightpage{
+    grid-column: 7;
+    grid-row: 1;
+    width: 400px;
+    height: auto;
+    margin-left: 10.3vw;
+    margin-top: 2vw;
+}
+
+#brand-design #teeshirt{
+    grid-column: 7;
+    grid-row: 2;
+    width: auto;
+    height: auto;
+    margin-left: 1vw;
+    margin-top: 1vw;
+}
+
+#brand-design #vector9{
+    grid-column: 6;
+    grid-row: 2;
+    width: auto;
+    height: auto;
+    margin-left: 1vw;
+    margin-top: 1vw;
+}
+
+#brand-design #vector10{
+    grid-column: 7;
+    grid-row: 2;
+    width: auto;
+    height: auto;
+    margin-left: 1vw;
+    margin-top: -3vw;
+}
+
+#brand-design #cloudlogo{
+    grid-column: 2;
+    grid-row: 7/8;
+    width: 1400px;
+    height: auto;
+    margin-left: 4vw;
+    margin-top: -5vw;
 }
 
 #contact span{
@@ -776,6 +858,7 @@ footer p{
     opacity: 1;
     pointer-events: none;
     transition: opacity 0.4s ease, transform 0.3s ease;
+    z-index: 100;
 }
 
 #backToTop.show {

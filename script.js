@@ -1,20 +1,29 @@
-const backToTopBtn = document.getElementById("backToTop");
+// JS (put this at the end of <body> or wrap in DOMContentLoaded)
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('backToTop');
+  if (!btn) return console.warn('#backToTop not found');
 
-window.addEventListener("scroll", () => {
-    if (backToTopBtn) {
-    if (window.scrollY > 300) {
-        backToTopBtn.classList.add("show");
-    } else {
-        backToTopBtn.classList.remove("show");
-    }
-    }
+  // Use .app if it exists; otherwise use the document/window
+  const container = document.querySelector('.app');
+  const usesWindow = !container;
+
+  const getScrollTop = () =>
+    usesWindow
+      ? (window.scrollY || document.documentElement.scrollTop)
+      : container.scrollTop;
+
+  const scrollToTop = () =>
+    usesWindow
+      ? window.scrollTo({ top: 0, behavior: 'smooth' })
+      : container.scrollTo({ top: 0, behavior: 'smooth' });
+
+  const onScroll = () => {
+    btn.classList.toggle('show', getScrollTop() > 300);
+  };
+
+  // Listen on the correct scroller
+  (usesWindow ? window : container).addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // set initial state
+
+  btn.addEventListener('click', scrollToTop);
 });
-
-if (backToTopBtn) {
-    backToTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-    });
-}
