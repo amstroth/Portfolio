@@ -27,3 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   btn.addEventListener('click', scrollToTop);
 });
+
+window.addEventListener("load", () => {
+    document.querySelector(".headshot").style.opacity = "1";
+});
+
+window.addEventListener("load", () => {
+    document.querySelector(".headshot").classList.add("show");
+});

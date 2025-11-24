@@ -36,7 +36,8 @@ body {
 
 ::-webkit-scrollbar {
     width: 12px;
-    background: rgba(255, 255, 255, 0.4);
+    background-color: transparent;
+    scrollbar-color: transparent;
     border-radius: 10px;
 }
 
@@ -46,7 +47,8 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.4);
+    background-color: transparent;
+    scrollbar-color: transparent;
     border-radius: 10px;
 }
 
@@ -137,12 +139,20 @@ div.portfoliodesc h2{
     padding: 0  8vw 4vw;
 }
 
-div.portfoliodesc img{
+.headshot{
+    opacity: 0;
     position: absolute;
+    transform: translateY(40px);
     z-index: 0;
     top: 19vw;
     right: 11vw;
     width: 30vw;
+    transition: opacity 1s ease-in, transform 1.5s ease-out;
+}
+
+.headshot.show {
+    opacity: 1;
+    transform: translateY(0); /* slide up */
 }
 
 div.portfoliodesc h4{
@@ -233,7 +243,7 @@ div.portfoliodesc .logo{
     z-index: 0;
     width: 10vw;
     margin-left: 20vw ;
-    margin-top: -8vw
+    margin-top: 7vw
 }
 
 div.pink{
@@ -512,10 +522,48 @@ div.pink{
     margin-top: 0.5vw;
 }
 
+#ui-design{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#ui-design h2{
+    grid-column: 1/6;
+    grid-row: 1;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 3vw;
+    font-weight: 500;
+    text-align: left;
+    font-style: italic;
+    margin-left: 8vw;
+    margin-bottom: -3vw;
+    margin-top: -vw;
+}
+
 .ui-design-iframe{
     width: 50vw;
     height: 50vw;
     border: none;
+}
+
+#one {
+    grid-row: 1;
+    grid-column: 1/3;
+    margin-top: 9vw;
+}
+
+#two{
+    grid-row: 2;
+    grid-column: 1;
+}
+
+#three{
+    grid-row: 2;
+    grid-column: 2;
+}
+
+#three .ui-design-iframe{
+    width:20vw;
 }
 
 #projects{
@@ -660,6 +708,20 @@ div.pink{
     margin-top: -4vw;
 }
 
+#vector5{
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: -8vw;
+}
+
+#vector8{
+    grid-column: 1;
+    grid-row:7;
+    bottom: -1vw;
+    margin-top: -10vw;
+    z-index: 2;
+}
+
 #brand-design #cover{
     grid-column: 1/9;
     grid-row: 1;
@@ -697,11 +759,11 @@ div.pink{
 }
 
 #brand-design #vector9{
-    grid-column: 6;
-    grid-row: 2;
+    grid-column: 10;
+    grid-row: 7;
     width: auto;
     height: auto;
-    margin-left: 1vw;
+    margin-left: 2.3vw;
     margin-top: 1vw;
 }
 
@@ -714,14 +776,207 @@ div.pink{
     margin-top: -3vw;
 }
 
+#brand-design #logo{
+    grid-column: 4;
+    grid-row: 6/7;
+    width: 500px;
+    height: auto;
+    margin-left: 5vw;
+    margin-top: 0vw;
+}
+
 #brand-design #cloudlogo{
     grid-column: 2;
     grid-row: 7/8;
     width: 1400px;
     height: auto;
-    margin-left: 4vw;
-    margin-top: -5vw;
+    margin-left: 0vw;
+    margin-top: 4vw;
 }
+
+#brand-design .p1{
+    position: relative;
+    grid-column: 7/9;
+    grid-row: 2;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1vw;
+    font-weight: 500;
+    text-align: center;
+    top: -20vw;
+}
+
+#brand-design .p2{
+    position: relative;
+    grid-column: 3/5;
+    grid-row: 2;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1vw;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1vw;
+    top: 10vw;
+}
+
+#brand-design .p3{
+    position: relative;
+    grid-column: 1;
+    grid-row: 2;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1vw;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1vw;
+
+}
+
+#three-d-modeling{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr ;
+}
+
+#three-d-modeling h2{
+    grid-column: 1/5;
+    grid-row: 1;
+    font-family: "Space Grotesk", sans-serif;
+    font-style: italic;
+    font-size: 2.5vw;
+    font-weight: 500;
+    text-align: left;
+    padding: 0  8vw 4vw;
+}
+
+#three-d-modeling #p1{
+    position: relative;
+    grid-column: 2;
+    grid-row: 1;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.4vw;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1vw;
+    padding: 8vw;
+    top: 4vw;
+    right: 10vw;
+}
+
+#three-d-modeling #p2{
+    position: relative;
+    grid-column: 2;
+    grid-row: 2;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.4vw;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1vw;
+    top: -35vw;
+    padding: 20vw;
+    right: 23vw;
+}
+
+#three-d-modeling #p3{
+    position: relative;
+    font-size: 1.4vw;
+    grid-column: 1;
+    grid-row: 3;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1vw;
+    top: -35vw;
+    padding: 5vw;
+}
+
+#wireframe{
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+    bottom: -10vw;
+}
+#matcap{
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+    bottom: -30vw;
+    left: 15vw;
+}
+
+#agate1{
+    position: relative;
+    grid-column: 3;
+    grid-row: 1;
+    bottom: -45vw;
+    left: -39vw;
+    width: 800px;
+}
+#agate4{
+    position: relative;
+    grid-column: 1;
+    grid-row: 2;
+    bottom: 20vw;
+    left: 0vw;
+    width:800px;
+}
+
+#agate2{
+    position: relative;
+    grid-column: 1;
+    grid-row: 2;
+    bottom: -20vw;
+    left: 0vw;
+    width:800px;
+}
+
+#agate3{
+    position: relative;
+    grid-column: 2;
+    grid-row: 2;
+    bottom: -8vw;
+    left: 5vw;
+    width: 1000px;
+}
+#bathroom{
+    position: relative;
+    grid-column: 2;
+    grid-row: 3;
+    bottom: 30vw;
+    left: -2vw;
+    width:50vw;
+}
+
+#backdrop{
+    position: relative;
+    grid-column: 1;
+    grid-row: 3;
+    bottom: 10vw;
+    left: 5vw;
+    width:50vw
+}
+#home{
+    position: relative;
+    grid-column: 1/3;
+    grid-row: 3;
+    bottom: -23vw;
+    width: 1750px;
+    left:4vw;
+    z-index: 3;
+}
+#portal{
+    position: relative;
+    grid-column: 1/4;
+    grid-row: 4;
+    bottom: 8vw;
+    width: 1950px;
+}
+
+#vector11 {
+    position: relative;
+    grid-column: 2;
+    grid-row: 3;
+    left: 34vw;
+    top:-30vw;
+}
+
 
 #contact span{
     font-family: "Space Grotesk", sans-serif;
