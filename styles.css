@@ -1236,7 +1236,7 @@ footer p{
     }
 
     .headshot{
-        opacity: 0;
+        opacity: 1;
         position: absolute;
         transform: translateY(40px);
         z-index: 0;
