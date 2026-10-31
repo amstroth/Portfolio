@@ -172,6 +172,13 @@ mark { background: var(--electric-blue); color: var(--teal); padding: 0 .15em; }
 .feature-copy h3 { font-family: var(--grotesk); font-style: italic; font-weight: 500; font-size: clamp(30px, 3.4vw, 50px); color: var(--electric-blue); margin: .15em 0 .4em; }
 .feature-copy p { font-size: clamp(15px, 1.2vw, 18px); line-height: 1.6; }
 .feature-stack { font-family: var(--grotesk); margin-top: 1em; opacity: .8; }
+.feature-shots { display: block; }
+.feature-link { display: inline-block; margin-top: 1.2em; font-family: var(--grotesk); font-weight: 500; font-size: clamp(16px, 1.3vw, 20px); color: var(--electric-blue); text-decoration: none; border-bottom: 2px solid currentColor; }
+.feature-link:hover { color: var(--pink); }
+.feature-views { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2vw; margin-top: clamp(48px, 6vw, 80px); }
+.feature-views figure { margin: 0; }
+.feature-views img { width: 100%; box-shadow: 0 .6vw 1.6vw rgba(0,0,0,.35); }
+.feature-views figcaption { font-family: var(--grotesk); font-size: 14px; margin-top: 10px; opacity: .85; }
 
 .proj { display: grid; grid-template-columns: 1fr 1fr; gap: 3vw; align-items: start; margin-bottom: clamp(36px, 4vw, 64px); }
 .proj img { max-width: 100%; max-height: 620px; width: auto; justify-self: start; }
@@ -269,6 +276,7 @@ mark { background: var(--electric-blue); color: var(--teal); padding: 0 .15em; }
     .ui-item--wide { grid-column: 1 / -1; }
     .web-row { grid-template-columns: 1fr; gap: 28px; }
     .feature { grid-template-columns: 1fr; gap: 40px; }
+    .feature-views { grid-template-columns: 1fr 1fr; gap: 20px; }
     .proj, .proj--flip { grid-template-columns: 1fr; }
     .proj--flip img { order: 0; }
     .proj img, .proj--flip img { max-height: 520px; justify-self: center; }
