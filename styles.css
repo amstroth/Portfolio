@@ -61,11 +61,13 @@ section { overflow: hidden; }
 .nav-toggle span:first-child::after { left: 0; top: 7px; }
 
 /* ---------- canvas (desktop collage) ---------- */
-.canvas {
+.canvas-wrap {
     container-type: inline-size;
-    position: relative;
     max-width: 1440px;
     margin: 0 auto;
+}
+.canvas {
+    position: relative;
     height: calc(var(--h) * 1cqw);
 }
 .c {
